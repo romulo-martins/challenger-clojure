@@ -7,5 +7,5 @@
 [x] Busca de compras pelo valor ou estabelecimento (opcional).
 
 # Todo pessoal
-[ ] Incluir os dados do usuário e cartão de credito na fatura.
+[x] Incluir os dados do usuário e cartão de credito na fatura.
 [x] Refatorar logicamente as funções em arquivos separados. 

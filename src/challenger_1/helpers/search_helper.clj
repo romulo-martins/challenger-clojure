@@ -1,5 +1,5 @@
 (ns challenger-1.helpers.search-helper
-    (:require [challenger-1.helpers.date-helper :as c.date]))
+  (:require [challenger-1.helpers.date-helper :as c.date]))
 
 (defn purchases-by-company
   [company purchases]

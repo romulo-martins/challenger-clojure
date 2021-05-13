@@ -10,9 +10,9 @@
 (def credit-cards
   [{:number "3528-3070-0184-0293" :cvv "418" :valid-date "2022-06-25" :limit 2000.00 :customer-id 1}
    {:number "6574-2810-2736-4628" :cvv "580" :valid-date "2025-12-12" :limit 4000.00 :customer-id 2}
-   {:number "586962943469851120" :cvv "112" :valid-date "2023-09-26" :limit 900.00 :customer-id 3}
+   {:number "5869-6294-3469-8511" :cvv "112" :valid-date "2023-09-26" :limit 900.00 :customer-id 3}
    {:number "6467-6824-2334-9677" :cvv "350" :valid-date "2024-10-08" :limit 2000.00 :customer-id 4}
-   {:number "56945858666677308" :cvv "582" :valid-date "2024-10-24" :limit 5000.00 :customer-id 5}])
+   {:number "5694-5858-6567-7730" :cvv "582" :valid-date "2024-10-24" :limit 5000.00 :customer-id 5}])
 
 (def purchases
   [{:date "2020-04-21" :amount 320.90 :company "Lojas Americanas" :category "Home" :customer-id 1}
