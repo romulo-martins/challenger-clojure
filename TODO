@@ -8,8 +8,4 @@
 
 # Todo pessoal
 [ ] Incluir os dados do usuário e cartão de credito na fatura.
-[ ] Refatorar logicamente as funções em arquivos separados. 
-
-[ ] Refatorar o cálculo do valor da fatura do mês (opcional).
-    - Em uma nova branch, substituir a implementação manual do helper de data para utilizar alguma lib para tratar datas.
-    - Sugestão: https://github.com/clj-time/clj-time 
+[x] Refatorar logicamente as funções em arquivos separados. 
