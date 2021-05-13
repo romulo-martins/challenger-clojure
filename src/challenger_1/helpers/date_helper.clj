@@ -1,4 +1,4 @@
-(ns challenger-1.date-helper
+(ns challenger-1.helpers.date-helper
   (:require [clojure.string :as str]))
 
 (defn get-month
