@@ -1,3 +1,3 @@
-# Introduction to challenger-1
+# Introduction to challenger-clojure
 
 TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)

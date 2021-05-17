@@ -1,6 +1,6 @@
-(ns challenger-1.models.purchase
-  (:require [challenger-1.db :as c.db]
-            [challenger-1.helpers.date-helper :as c.date]))
+(ns challenger-clojure.models.purchase
+  (:require [challenger-clojure.db :as c.db]
+            [challenger-clojure.helpers.date-helper :as c.date]))
 
 (defn all [] c.db/purchases)
 

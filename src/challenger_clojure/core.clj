@@ -1,6 +1,6 @@
-(ns challenger-1.core
-  (:require [challenger-1.models.purchase :as c.purchase]
-            [challenger-1.logic :as c.logic]
+(ns challenger-clojure.core
+  (:require [challenger-clojure.models.purchase :as c.purchase]
+            [challenger-clojure.logic :as c.logic]
             [clojure.pprint :as pp]))
 
 (defn main

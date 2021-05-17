@@ -1,4 +1,4 @@
-(ns challenger-1.db)
+(ns challenger-clojure.db)
 
 (def customers
   [{:id 1 :name "Júlia Rameira" :cpf "642441182" :email "julia_rameira@gmail.com"}

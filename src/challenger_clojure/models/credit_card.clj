@@ -1,5 +1,5 @@
-(ns challenger-1.models.credit-card
-  (:require [challenger-1.db :as c.db]))
+(ns challenger-clojure.models.credit-card
+  (:require [challenger-clojure.db :as c.db]))
 
 (defn all [] c.db/credit-cards)
 

@@ -1,7 +1,7 @@
-(ns challenger-1.logic
-  (:require [challenger-1.models.customer :as c.customer]
-            [challenger-1.models.credit-card :as c.credit-card]
-            [challenger-1.models.purchase :as c.purchase]))
+(ns challenger-clojure.logic
+  (:require [challenger-clojure.models.customer :as c.customer]
+            [challenger-clojure.models.credit-card :as c.credit-card]
+            [challenger-clojure.models.purchase :as c.purchase]))
 
 (defn compute-purchases-amount
   [purchases]

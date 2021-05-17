@@ -1,4 +1,6 @@
-# Todo do desafio
+# Desafio 1
+
+## TODO 
 [x] Representação dos dados do cliente (nome, cpf, email);
 [x] Representação dos dados do cartão (número, cvv, validade, limite);
 [x] Listagem de compras realizadas (data, valor, estabelecimento, categoria);
@@ -6,6 +8,12 @@
 [x] Cálculo do valor da fatura do mês (opcional);
 [x] Busca de compras pelo valor ou estabelecimento (opcional).
 
-# Todo pessoal
-[x] Incluir os dados do usuário e cartão de credito na fatura.
-[x] Refatorar logicamente as funções em arquivos separados. 
+--- 
+
+# Desafio 2
+
+## TODO 
+[ ] Se conectar à uma instância local do banco de dados Datomic;
+[ ] Armazenar as informações do cliente e de seu cartão;
+[ ] Armazenar as informações das compras realizadas;
+[ ] Recuperar e listar as compras realizadas.
