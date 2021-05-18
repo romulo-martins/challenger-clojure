@@ -1,18 +1,24 @@
 (ns challenger-clojure.core
-  (:require [challenger-clojure.models.purchase :as c.purchase]
-            [challenger-clojure.logic :as c.logic]
-            [clojure.pprint :as pp]))
+  (:use [clojure pprint])
+  (:require [challenger-clojure.models.customer :as customer]
+            [challenger-clojure.db.seed :as seed]
+            [challenger-clojure.db.core :as db]))
 
-(defn main
-  []
-  (println "\n Listagem de compras realizadas:")
-  (pp/pprint (c.purchase/all))
+(def conn (db/open-connection))
 
-  (println "\n Total dos gastos agrupados por categoria:")
-  (pp/pprint (c.logic/total-amount-by-category (c.purchase/all)))
+(defn main []
+  (println "Clean database ...")
+  (db/delete-database)
 
-  (println "\n Busca de compras por estabelecimento: (Ex: Ri Happy)")
-  (pp/pprint (c.purchase/by-company "Ri Happy"))
+  (def conn (db/open-connection))
 
-  (println "\n Calculo da fatura do mes: (Ex: Cliente 1, Mes 03/2021)")
-  (pp/pprint (c.logic/customer-invoice-by-month 1 "2021-03")))
+  (println "Create schema ...")
+  (db/create-schema conn)
+
+  (seed/run conn)
+
+  (println "All customers")
+  (pprint (customer/all conn))
+
+  (println "Finding customer from cpf (336987973) ...")
+  (pprint (customer/by-cpf conn "336987973")))

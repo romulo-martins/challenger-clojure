@@ -13,7 +13,7 @@
 # Desafio 2
 
 ## TODO 
-[ ] Se conectar à uma instância local do banco de dados Datomic;
+[x] Se conectar à uma instância local do banco de dados Datomic;
 [ ] Armazenar as informações do cliente e de seu cartão;
 [ ] Armazenar as informações das compras realizadas;
 [ ] Recuperar e listar as compras realizadas.
