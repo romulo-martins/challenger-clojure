@@ -1,4 +1,4 @@
-# Challenger 1
+# Challenger Clojure
 
 First challenger of an Course made by Alura to new nubankers.
 
