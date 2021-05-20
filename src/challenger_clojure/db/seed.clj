@@ -2,7 +2,8 @@
   (:use [clojure pprint])
   (:require [challenger-clojure.db.core :as db]
             [challenger-clojure.models.customer :as customer]
-            [challenger-clojure.models.credit-card :as credit-card]))
+            [challenger-clojure.models.credit-card :as credit-card]
+            [challenger-clojure.models.purchase :as purchase]))
 
 (def customers
   [{:id "a621fad5-d1c4-410f-a7d7-79b8a5c0875c" :name "Júlia Rameira"     :cpf "642441182" :email "julia_rameira@gmail.com"}
@@ -33,29 +34,23 @@
    {:date "2020-04-20" :amount 1297.58 :company "Leroy Merlin"     :category "Home"        :customer-id "5fbb381e-6fde-403a-8071-389d818d4de8"}])
 
 (defn seed-customers! [conn]
-  (println "Seeding database with customers ...")
-  (doseq [params customers]
-    (let [customer (customer/new params)]
-      (pprint @(db/insert-data! conn [customer])))))
+  (let [customers-data (map customer/new customers)]
+    (db/insert-data! conn customers-data)))
 
 (defn seed-credit-cards! [conn]
-  (println "Seeding database with credit cards ...")
-  (doseq [params credit-cards]
-    (let [credit-card (credit-card/new params)]
-      (println credit-card)
-      (pprint @(db/insert-data! conn [credit-card])))))
+  (let [credit-cards-data (map credit-card/new credit-cards)]
+    (db/insert-data! conn credit-cards-data)))
 
-; Running
+(defn seed-purchases! [conn]
+  (let [purchase-data (map purchase/new purchases)]
+    (db/insert-data! conn purchase-data)))
+
 (defn run
   [conn]
+  (println "Seeding database with customers ...")
   (seed-customers! conn)
+  (println "Seeding database with credit cards ...")
   (seed-credit-cards! conn)
+  (println "Seeding database with purchases ...")
+  (seed-purchases! conn)
   (println "Successful seeding!"))
-
-;; (def conn (db/open-connection!))
-;; (db/create-schema! conn)
-
-;; (run conn)
-
-;; (pprint (customer/all conn))
-;; (pprint (credit-card/all conn))

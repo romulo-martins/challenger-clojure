@@ -15,8 +15,8 @@
 ## TODO 
 [x] Se conectar à uma instância local do banco de dados Datomic;
 [x] Armazenar as informações do cliente e de seu cartão;
-[ ] Armazenar as informações das compras realizadas;
-[ ] Recuperar e listar as compras realizadas.
+[x] Armazenar as informações das compras realizadas;
+[x] Recuperar e listar as compras realizadas.
 (opcional) Relatórios:
     [ ] Cliente que realizou o maior número de compras;
     [ ] Cliente que realizou a compra de maior valor;

@@ -17,4 +17,4 @@
 
 (defn create-schema!
   [conn]
-  (d/transact conn schema/instance))
+  (d/transact conn schema/all))
