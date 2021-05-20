@@ -4,17 +4,17 @@
 
 (def db-uri "datomic:dev://localhost:4334/challenger_clojure)")
 
-(defn open-connection []
+(defn open-connection! []
   (d/create-database db-uri)
   (d/connect db-uri))
 
-(defn insert-data
+(defn insert-data!
   [conn data]
   (d/transact conn data))
 
-(defn delete-database []
+(defn delete-database! []
   (d/delete-database db-uri))
 
-(defn create-schema
+(defn create-schema!
   [conn]
-  (d/transact conn schema/customer))
+  (d/transact conn schema/instance))
