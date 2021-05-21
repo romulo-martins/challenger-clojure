@@ -4,7 +4,7 @@
 
 (defn new
   [params]
-  {:customer/id    (uuid/from-string (params :id))
+  {:customer/id    (uuid/generate (params :id))
    :customer/name  (params :name)
    :customer/cpf   (params :cpf)
    :customer/email (params :email)})
