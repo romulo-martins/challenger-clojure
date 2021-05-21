@@ -19,5 +19,5 @@
 [x] Recuperar e listar as compras realizadas.
 (opcional) Relatórios:
     [ ] Cliente que realizou o maior número de compras;
-    [ ] Cliente que realizou a compra de maior valor;
+    [x] Cliente que realizou a compra de maior valor;
     [ ] Clientes que nunca realizaram compras.
