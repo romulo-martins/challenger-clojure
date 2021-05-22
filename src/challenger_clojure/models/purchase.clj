@@ -20,19 +20,10 @@
 
 (defn most-expensive
   [conn]
-  (let [highest-amount (ffirst (d/q '[:find (max ?amount)
-                                      :where [?purchase :purchase/amount ?amount]]
-                                    (d/db conn)))]
-    (d/q '[:find (pull ?purchase [* {:purchase/customer [*]}])
-           :in $ ?highest-amount
-           :where [?purchase :purchase/amount ?amount]
-           [(= ?amount ?highest-amount)]] (d/db conn) highest-amount)))
+  (d/q '[:find (pull ?purchase [* {:purchase/customer [*]}])
+         :where [(q '[:find (max ?max-amount)
+                      :where [?purchase :purchase/amount ?max-amount]] $)
+                 [[?max-amount]]]
+         [?purchase :purchase/amount ?amount]
+         [(= ?amount ?max-amount)]] (d/db conn)))
 
-;; (defn total-by-customer
-;;   [conn]
-;;   (d/q '[:find ?customer-name (count ?purchase-id)
-;;          :keys customer-name total-purchases
-;;          :with ?purchase
-;;          :where [?purchase :purchase/id ?purchase-id]
-;;          [?purchase :purchase/customer ?customer]
-;;          [?customer :customer/name ?customer-name]] (d/db conn)))
