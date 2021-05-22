@@ -21,3 +21,11 @@
   (d/q '[:find (pull ?customer [*])
          :in $ ?cpf
          :where [?customer :customer/cpf ?cpf]] (d/db conn) customer-cpf))
+
+(defn without-purchases
+  [conn]
+  (d/q '[:find (pull ?customer [*])
+         :where
+         [?customer :customer/id ?customer-id]
+         (not-join [?customer]
+                   [?purchase :purchase/customer ?customer])] (d/db conn)))

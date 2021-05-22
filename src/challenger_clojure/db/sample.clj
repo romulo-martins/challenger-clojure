@@ -1,11 +1,13 @@
 (ns challenger-clojure.db.sample)
 
 (def customers
-  [{:id "a621fad5-d1c4-410f-a7d7-79b8a5c0875c" :name "Júlia Rameira"     :cpf "642441182" :email "julia_rameira@gmail.com"}
-   {:id "8151e594-bac3-41f7-aacb-c9bc068c5b68" :name "Arthur Henrique"   :cpf "999969705" :email "arthur_henri@outlook.com"}
-   {:id "45b0769d-cf93-458c-a63b-1092191fdc4c" :name "Amanda Assumpção"  :cpf "240568126" :email "amanda_assump@@hotmail.com"}
-   {:id "acba1f0c-de44-4ca2-9379-dde23e709b64" :name "Leonardo Nogueira" :cpf "336987973" :email "leo_nog@hotmail.com"}
-   {:id "5fbb381e-6fde-403a-8071-389d818d4de8" :name "Gabriel Batista"   :cpf "814957331" :email "gab_batista@gmail.com"}])
+  [{:id "a621fad5-d1c4-410f-a7d7-79b8a5c0875c" :name "Júlia Rameira"     :cpf "78414662005" :email "julia_rameira@gmail.com"}
+   {:id "8151e594-bac3-41f7-aacb-c9bc068c5b68" :name "Arthur Henrique"   :cpf "32570067059" :email "arthur_henri@outlook.com"}
+   {:id "45b0769d-cf93-458c-a63b-1092191fdc4c" :name "Amanda Assumpção"  :cpf "33380697079" :email "amanda_assump@hotmail.com"}
+   {:id "d508faf2-feea-488a-9a13-3eece69d34e4" :name "Eduarda Prado"     :cpf "52090540044" :email "duda_prado@hotmail.com"}
+   {:id "acba1f0c-de44-4ca2-9379-dde23e709b64" :name "Leonardo Nogueira" :cpf "01479715000" :email "leo_nog@hotmail.com"}
+   {:id "5fbb381e-6fde-403a-8071-389d818d4de8" :name "Gabriel Batista"   :cpf "38492230002" :email "gab_batista@gmail.com"}
+   {:id "8cbfcd0a-e777-4c0c-9a49-79457d8aedd2" :name "João Felipe"       :cpf "73987820047" :email "joao_felipe@outlook.com"}])
 
 (def credit-cards
   [{:number "3528-3070-0184-0293" :cvv "418" :valid-date "2022-06-25" :limit 2000.00 :customer-id "a621fad5-d1c4-410f-a7d7-79b8a5c0875c"}

@@ -20,4 +20,4 @@
 (opcional) Relatórios:
     [ ] Cliente que realizou o maior número de compras;
     [x] Cliente que realizou a compra de maior valor;
-    [ ] Clientes que nunca realizaram compras.
+    [x] Clientes que nunca realizaram compras.
