@@ -17,13 +17,3 @@
   [conn]
   (d/q '[:find (pull ?purchase [*])
          :where [?purchase :purchase/id]] (d/db conn)))
-
-(defn most-expensive
-  [conn]
-  (d/q '[:find (pull ?purchase [* {:purchase/customer [*]}])
-         :where [(q '[:find (max ?max-amount)
-                      :where [?purchase :purchase/amount ?max-amount]] $)
-                 [[?max-amount]]]
-         [?purchase :purchase/amount ?amount]
-         [(= ?amount ?max-amount)]] (d/db conn)))
-

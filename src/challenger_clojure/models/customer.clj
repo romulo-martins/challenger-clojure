@@ -29,3 +29,13 @@
          [?customer :customer/id ?customer-id]
          (not-join [?customer]
                    [?purchase :purchase/customer ?customer])] (d/db conn)))
+
+(defn with-most-expensive-purchase
+  [conn]
+  (d/q '[:find (pull ?customer [*])
+         :where [(q '[:find (max ?max-amount)
+                      :where [?purchase :purchase/amount ?max-amount]] $)
+                 [[?max-amount]]]
+         [?purchase :purchase/amount ?amount]
+         [(= ?amount ?max-amount)]
+         [?purchase :purchase/customer ?customer]] (d/db conn)))
