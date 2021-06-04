@@ -19,3 +19,8 @@
    (filter #(= customer-id (% :customer-id)) c.db/purchases))
   ([customer-id purchases]
    (filter #(= customer-id (% :customer-id)) purchases)))
+
+; Adiciona um novo elemento e retorna uma nova lista de compras 
+(defn add
+  [purchases new-purchase]
+  (conj purchases new-purchase))

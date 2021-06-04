@@ -13,7 +13,15 @@
 # Desafio 2
 
 ## TODO 
-[ ] Se conectar à uma instância local do banco de dados Datomic;
-[ ] Armazenar as informações do cliente e de seu cartão;
-[ ] Armazenar as informações das compras realizadas;
-[ ] Recuperar e listar as compras realizadas.
+[x] Se conectar à uma instância local do banco de dados Datomic;
+[x] Armazenar as informações do cliente e de seu cartão;
+[x] Armazenar as informações das compras realizadas;
+[x] Recuperar e listar as compras realizadas.
+
+---
+
+# Desafio 4
+
+[x] Teste da função que adiciona uma nova compra;
+[ ] Teste da função que lista todas as compras;
+[ ] Teste da função que lista os gastos agrupados por categoria.
