@@ -23,5 +23,6 @@
 # Desafio 4
 
 [x] Teste da função que adiciona uma nova compra;
-[ ] Teste da função que lista todas as compras;
-[ ] Teste da função que lista os gastos agrupados por categoria.
+[-] Teste da função que lista todas as compras;
+    - precisa mesmo?
+[x] Teste da função que lista os gastos agrupados por categoria.

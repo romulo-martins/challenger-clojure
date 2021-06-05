@@ -24,3 +24,27 @@
 (defn add
   [purchases new-purchase]
   (conj purchases new-purchase))
+
+
+; Total por categoria
+
+(defn- compute-purchases-amount
+  [purchases]
+  (->>
+   purchases
+   (map #(get % :amount))
+   (reduce +)))
+
+(defn- compute-amount-by-category
+  [[category purchases]]
+  (if (not (nil? category))
+    {:category category
+    :total-amount (compute-purchases-amount purchases)}))
+
+(defn total-amount-by-category
+  [purchases]
+  (->>
+   purchases
+   (group-by :category)
+   (map compute-amount-by-category)
+   (remove nil?)))
